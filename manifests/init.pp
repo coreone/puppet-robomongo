@@ -1,8 +1,3 @@
-# This is a placeholder class.
-class robomongo {
-  anchor { 'Hello_World': }
-}
-
 # Public: Install Robomongo to /Applications.
 #
 # Examples
