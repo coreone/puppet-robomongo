@@ -16,8 +16,8 @@ class robomongo(
     $architecture = 'x86_64'
 ) {
 
-    package { "Robomongo-${version}-${architecture}":
-        provider => 'appdmg',
+    package { "Robomongo-${version}":
+        provider => 'appdmg_eula',
         source   => "http://robomongo.org/files/mac/Robomongo-${version}-${architecture}.dmg",
     }
 
