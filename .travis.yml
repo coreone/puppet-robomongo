@@ -1,6 +1,8 @@
 ---
 sudo: false
 language: ruby
+cache: bundler
+install: bundle install --binstubs .bundle/binstubs --path .bundle --quiet
 script: "./script/cibuild"
 gemfile: "this/does/not/exist"
 rvm:
