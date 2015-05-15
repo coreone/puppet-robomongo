@@ -2,7 +2,7 @@
 sudo: false
 language: ruby
 cache: bundler
-bundler_args: --binstubs .bundle/binstubs --path .bundle --quiet
+env: BUNDLE_PATH=.bundle
 script: "./script/cibuild"
 gemfile: "this/does/not/exist"
 rvm:
