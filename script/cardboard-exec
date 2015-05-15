@@ -13,7 +13,9 @@ BUNDLE_ARGS="--binstubs $BIN --path $BUNDLE --quiet"
 [ "cibuild" = "$SCRIPT" ] && BUNDLE_ARGS="$BUNDLE_ARGS --no-quiet"
 
 rm -rf {$BIN,$BUNDLE/config}
+echo "Bundle Install"
 bundle install $BUNDLE_ARGS
-
+echo "Bootstrap"
 bundle exec cardboard bootstrap
+echo "Execute script"
 exec bundle exec cardboard "$SCRIPT" "$@"
