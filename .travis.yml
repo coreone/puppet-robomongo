@@ -1,11 +1,14 @@
----
 sudo: false
 language: ruby
 cache: bundler
-env: BUNDLE_PATH=.bundle
-script: "./script/cibuild"
-gemfile: "this/does/not/exist"
+env:
+  matrix:
+  - BUNDLE_PATH=.bundle
+  global:
+    secure: rcWFyl0J1lybuIj6psY6bEi5Nwen8Flc4TyhBf/6dG1OD+N7LFAAAVbUtjwbRJHmxzDv0lc4IGKXC1R2WOHAPlCejWcM6sjcYK0+isLeLBLWNnP8Z+vxmOvUfbWxDawTs7YxMd1IqAz/OatZeaQsfw5FvkIY//VyTeF4be1UckrkgxFEyP3xGf6LqWmH6MyYCr2qnHhUPvZ6Up5xvepg52GnIyQI3urV3IDrZ0K5hMsk5g+ooKSfj96YXPnv8ppuZIShbw52jfdxIwywvfOcAWXHq7YkOLkG5cYY6M9ZUKzRs/fu8TIMPx5NNePGPhe3ZKfY6A8Nty7DsvUKOlNH6UGx+hB7yOGRwVphIzsGULig7Rx9HCNsoBRcf3+pNsgrmiBigmzrZAZB5RjiO7NixK6mR357rnKHRQ9xrmX51T0EITKmaG4hxNwREy6EyrV6M08D6Pn47dSOEL1JiGmzo5DH/JdQ2eBe43TzDW7si+MH2tgb6xVooTwJxO3u5qAcwEQZM493LtfX/pXKrV8Qs54KnVb7PZNrUqJJYJdhQY1dCxy4zyuhS/JUfPBJ9cUM78rr2ge89F/UCxmQOMDYsEBeh95tEvxT2ZRtU+g1/o6HMGEvrD4qGjbRz6KhUGS+aBl5IGpxeHOxHUo7jVt4fiuIbuPrmJSA0KbKvr4eO9E=
+script: ./script/cibuild
+gemfile: this/does/not/exist
 rvm:
-  - "1.9.3"
-  - "2.0.0"
-  - "2.1.2"
+- 1.9.3
+- 2.0.0
+- 2.1.2
