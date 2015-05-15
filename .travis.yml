@@ -2,12 +2,10 @@
 sudo: false
 language: ruby
 cache: bundler
-install: bundle install --binstubs .bundle/binstubs --path .bundle --quiet
+bundler_args: --binstubs .bundle/binstubs --path .bundle --quiet
 script: "./script/cibuild"
 gemfile: "this/does/not/exist"
 rvm:
   - "1.9.3"
   - "2.0.0"
-  - "2.1.0"
-  - "2.1.1"
   - "2.1.2"
